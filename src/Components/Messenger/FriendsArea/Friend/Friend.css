@@ -1,0 +1,33 @@
+.friend {
+  height: 10%;
+  overflow: hidden;
+  margin: 5px 0px;
+  width: 90%;
+  border-radius: 50px;
+  background-color: #ffffff;
+  display: flex;
+  gap: 12px;
+  padding: 5px;
+  cursor: pointer;
+}
+.friend img {
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+  background-position: center center;
+}
+.friend_info_message {
+  min-width: 25%;
+  height: 75%;
+  align-self: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  font-style: italic;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 0.8rem;
+}
+.friend_name_message {
+  font-size: 1.3rem;
+  font-weight: 700;
+}
