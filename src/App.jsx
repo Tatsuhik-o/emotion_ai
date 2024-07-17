@@ -6,7 +6,6 @@ import { useState } from "react";
 function App() {
   const [currentSelected, setCurrentSelected] = useState(null);
   const [showMoreInfo, setShowMoreInfo] = useState(false);
-  console.log(currentSelected);
   return (
     <div className="app">
       <Messenger setCurrentSelected={setCurrentSelected} />
