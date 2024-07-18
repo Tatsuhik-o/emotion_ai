@@ -1,0 +1,23 @@
+.chat_ai_message {
+  max-width: 50%;
+  display: flex;
+  align-items: center;
+  color: white;
+  margin-right: auto;
+  margin-left: 10px;
+  margin-bottom: 10px;
+  gap: 10px;
+}
+.chat_ai_img {
+  width: 10%;
+  align-self: flex-start;
+}
+.chat_ai_entry {
+  background-color: #696969;
+  height: 100%;
+  border-radius: 12px;
+  padding: 8px;
+  font-style: italic;
+  font-size: 1rem;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}

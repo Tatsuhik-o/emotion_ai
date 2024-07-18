@@ -7,7 +7,7 @@ function IconArea({ setIsAddNewFriend, friends }) {
       <div className="icons">
         <i className="fa-regular fa-video-plus"></i>
         <i
-          className="fa-light fa-messages"
+          className="fa-regular fa-message-plus"
           onClick={() => {
             if (friends.length > 4) return;
             setIsAddNewFriend(true);

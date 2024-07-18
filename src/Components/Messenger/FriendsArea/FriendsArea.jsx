@@ -30,12 +30,17 @@ function FriendsArea({
     if (!name || !image) return;
     setFriends((friends) => [
       ...friends,
-      { id: friends.length, name: capitalize(name), image, ["messages"]: [] },
+      {
+        id: friends.length,
+        name: capitalize(name),
+        image,
+        ["messages"]: [],
+      },
     ]);
     setIsAddNewFriend(false);
     setName("");
     setImage(
-      `https://avatar.iran.liara.run/public/${Math.floor(Math.random() * 20)}`
+      `https://avatar.iran.liara.run/public/${Math.floor(Math.random() * 90)}`
     );
   }
   return (

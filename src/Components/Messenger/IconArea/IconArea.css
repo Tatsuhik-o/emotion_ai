@@ -30,6 +30,10 @@
 .fa-video-plus:hover {
   color: #778beb;
 }
-.fa-messages:hover {
+.fa-message-plus {
+  font-size: 2rem;
+  transform: translateY(10%);
+}
+.fa-message-plus:hover {
   color: #58b19f;
 }

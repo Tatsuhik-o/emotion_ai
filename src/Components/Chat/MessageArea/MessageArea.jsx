@@ -1,5 +1,14 @@
+import { useState } from "react";
 import "./MessageArea.css";
-function MessageArea() {
+function MessageArea({ currentSelected, setFriends }) {
+  const [currentMessage, setCurrentMessage] = useState("");
+  function handleUserMessage(e) {
+    setCurrentMessage(e.target.value);
+  }
+  function handleSubmit() {
+    setCurrentMessage("");
+  }
+
   return (
     <div className="message_area_selected">
       <div className="icons_message_area">
@@ -12,8 +21,12 @@ function MessageArea() {
         type="text"
         className="user_message_chat"
         placeholder="Your Message ..."
+        disabled={currentSelected ? false : true}
+        value={currentMessage}
+        onChange={handleUserMessage}
+        onKeyDown={(e) => e.key === "Enter" && handleSubmit()}
       />
-      <div className="send_button_icon">
+      <div className="send_button_icon" onClick={handleSubmit}>
         <i className="fa-regular fa-paper-plane-top"></i>
       </div>
     </div>

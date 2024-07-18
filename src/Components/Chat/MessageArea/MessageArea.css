@@ -25,6 +25,9 @@
   font-size: 1.3rem;
   font-style: italic;
 }
+input:disabled {
+  filter: brightness(85%);
+}
 .send_button_icon {
   width: 5%;
   font-size: 1.8rem;

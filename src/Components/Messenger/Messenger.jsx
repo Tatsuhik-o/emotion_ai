@@ -4,9 +4,8 @@ import IconArea from "./IconArea/IconArea";
 import SearchArea from "./SearchArea/SearchArea";
 import FriendsArea from "./FriendsArea/FriendsArea";
 import { FriendsProvider } from "./FriendsContext";
-function Messenger({ setCurrentSelected }) {
+function Messenger({ setCurrentSelected, friends, setFriends }) {
   const [isAddNewFriend, setIsAddNewFriend] = useState(false);
-  const [friends, setFriends] = useState([]);
   const [friendsToDisplay, setFriendsToDisplay] = useState([]);
   useEffect(() => {
     setFriendsToDisplay([...friends]);

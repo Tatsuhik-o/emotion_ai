@@ -30,7 +30,8 @@ function Friend({
       <div className="friend_info_message">
         <div className="friend_name_message">{friend.name}</div>
         <div className="friend_lastmessage">
-          {friend.messages[friend.messages.length - 1] || "Placeholder ..."}
+          {friend?.messages[friend.messages.length - 1]?.slice(0, 25) ||
+            "Start Chatting ..."}
         </div>
       </div>
     </div>
