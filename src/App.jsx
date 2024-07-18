@@ -7,6 +7,7 @@ function App() {
   const [currentSelected, setCurrentSelected] = useState(null);
   const [showMoreInfo, setShowMoreInfo] = useState(false);
   const [friends, setFriends] = useState([]);
+  console.log(friends);
   useEffect(() => {
     let temp = {};
     if (currentSelected === null) return;
@@ -14,7 +15,12 @@ function App() {
       if (elem.id === currentSelected.id) temp = elem;
     });
     setCurrentSelected(temp);
+    localStorage.setItem("friends", JSON.stringify(friends));
   }, [friends]);
+  useEffect(() => {
+    if (localStorage.getItem("friends"))
+      setFriends(JSON.parse(localStorage.getItem("friends")));
+  }, []);
   return (
     <div className="app">
       <Messenger

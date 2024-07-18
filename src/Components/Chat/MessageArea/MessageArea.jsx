@@ -1,12 +1,16 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import "./MessageArea.css";
 function MessageArea({ currentSelected, setFriends }) {
   const [currentMessage, setCurrentMessage] = useState("");
+  const [inputState, setInputState] = useState(false);
   function handleUserMessage(e) {
     setCurrentMessage(e.target.value);
   }
+  useEffect(() => {
+    setInputState(currentSelected ? false : true);
+  }, [currentSelected]);
   function handleSubmit() {
-    setCurrentMessage("");
+    setInputState(true);
   }
 
   return (
@@ -21,7 +25,7 @@ function MessageArea({ currentSelected, setFriends }) {
         type="text"
         className="user_message_chat"
         placeholder="Your Message ..."
-        disabled={currentSelected ? false : true}
+        disabled={inputState}
         value={currentMessage}
         onChange={handleUserMessage}
         onKeyDown={(e) => e.key === "Enter" && handleSubmit()}
